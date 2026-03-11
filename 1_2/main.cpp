@@ -44,13 +44,17 @@ std::string BinaryNumber(int EnterNumber)
         return Result;
     };
 
-int main()
+int main(int argc, char* argv[])
 {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
-	int EnterNumber;
-    std::cout << "Введите число (0-255): ";
-	std::cin >> EnterNumber;
+
+    if (argc != 2) {
+        std::cout << "ERROR: Неправильный формат. Используйте: flipbyte.exe <число от 0 до 255>" << std::endl;
+        return 1;
+    }
+
+	int EnterNumber = std::atoi(argv[1]);;
     
     if (EnterNumber >= 0 && EnterNumber <= 256)
     {
