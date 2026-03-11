@@ -54,6 +54,14 @@ int main(int argc, char* argv[])
         return 1;
     }
 
+    std::string arg = argv[1];
+    for (char c : arg) {
+        if (!isdigit(c)) {
+            std::cout << "ERROR: Введите корректное число!" << std::endl;
+            return 1;
+        }
+    }
+
 	int EnterNumber = std::atoi(argv[1]);;
     
     if (EnterNumber >= 0 && EnterNumber <= 256)
@@ -65,7 +73,7 @@ int main(int argc, char* argv[])
     } 
     else 
     {
-        std::cout << "ERROR: число должно быть в диапозоне от 0 до 256!!! \n";
+        std::cout << "ERROR: число должно быть в диапозоне от 0 до 255!!! \n";
     }
 
 }
