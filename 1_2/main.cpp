@@ -10,7 +10,7 @@ std::string BinaryNumber(int EnterNumber)
         int Temp = EnterNumber;
         for (int i = 0; i < 8; i++) 
         {
-            Bufer = temp % 2;
+            Bufer = Temp % 2;
             if (Bufer > 0) 
             {
             Binary = Binary + "1";
@@ -26,14 +26,14 @@ std::string BinaryNumber(int EnterNumber)
 
     int FinalNumber(const std::string& Binary)
     {
-        int Binary = 0;
+        int Result = 0;
         int Degree = 7;
 
         for (char c : Binary)
         {
             if (c == '1')
             {
-                Binary = Binary + pow(2, Degree);
+                Result = Result + pow(2, Degree);
                 Degree = Degree - 1;
             }
             else
@@ -41,7 +41,7 @@ std::string BinaryNumber(int EnterNumber)
                 Degree = Degree - 1;
             }
         }
-        return Binary;
+        return Result;
     };
 
 int main()
