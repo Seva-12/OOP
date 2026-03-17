@@ -36,6 +36,7 @@ std::string ReplaceString(const std::string& subject,
 }
 
 //функция для работы с файлами
+//TODO выяснить что такое ifstream, как программа работает одинаково и с файлом и консолью
 void CopyStreamWithReplacement(std::istream& input, std::ostream& output,
 	const std::string& searchString, const std::string& replacementString)
 {
@@ -82,6 +83,7 @@ int main(int argc, char* argv[])
 		if (!std::getline(std::cin, search)) 
 		{
 			std::cout << "ERROR";
+			//TODO узнать какие коды бывают из main какой return
 			return 0;
 		}
 
@@ -93,6 +95,7 @@ int main(int argc, char* argv[])
 		}
 
 		std::string firstLine;
+		//TODO если нет второй третьей и тд линии лучше назвать по другому 
 		if (!std::getline(std::cin, firstLine)) 
 		{
 			std::cout << replace;

@@ -3,6 +3,9 @@
 #include <cmath>
 #include <Windows.h>
 
+
+//TODO указать в название метода что она реверсит
+//TODO переводить число не в строку, реверсить число нужно сдвигами
 std::string BinaryNumber(int EnterNumber)
     {
         std::string Binary;
@@ -24,6 +27,7 @@ std::string BinaryNumber(int EnterNumber)
         return Binary;
     }
 
+    //TODO также поработать с названием функции, высчитывать степень
     int FinalNumber(const std::string& Binary)
     {
         int Result = 0;
@@ -62,8 +66,10 @@ int main(int argc, char* argv[])
         }
     }
 
+    //TODO какие исключение может давать atoi
 	int EnterNumber = std::atoi(argv[1]);;
     
+    //TODO тесты границ
     if (EnterNumber >= 0 && EnterNumber <= 256)
     {
         std::string Binary = BinaryNumber(EnterNumber);

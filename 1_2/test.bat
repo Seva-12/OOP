@@ -1,7 +1,5 @@
 @echo off
 chcp 65001 > nul
-echo Тестирование flipbyte.exe
-echo ========================
 echo.
 
 :: Проверка существования файла
@@ -54,8 +52,8 @@ echo Ожидается сообщение об ошибке
 echo.
 
 :: ТЕСТ 8: Ошибка - буквы
-echo Тест 8: flipbyte.exe abc
-flipbyte.exe abc
+echo Тест 8: flipbyte.exe f
+flipbyte.exe f
 echo Ожидается сообщение об ошибке
 echo.
 

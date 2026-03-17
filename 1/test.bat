@@ -1,6 +1,8 @@
 @echo off
 set PROGRAM=%~1
 
+rem TODO добавить тест замены на несуществующую строку
+
 rem Тест 1:запуск без параметров (режим stdin)
 echo Test 1: Run without parameters
 echo. | %PROGRAM% > nul
